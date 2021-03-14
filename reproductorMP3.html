@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReproductorMP3</title>
+    <link rel="stylesheet" href="mp3.css">
+    <script src="imagenes/font-awesone/js/all.min.js"></script>
+</head>
+
+<body>
+   
+    <div class="Reprod">
+        <div>
+            <img class="img1" src="imagenes/musica-ventas-spotwifi-874x492.jpg" alt="">
+        </div>
+
+        <div class="image">
+            <img class="img2" src="imagenes/musica-ventas-spotwifi-874x492.jpg" alt="">
+        </div>
+        <div class="player">
+        <span id="songTitle"></span>
+        <div class="buttonReprod">
+            <audio onended="funcSiguiente()" id="song"  type= "audio.mpeg"></audio>
+        </div>
+        <input id="barra" class="barra" type="text" type="range" min="0" step="1" onchange="seekSong()"/>
+            <div class="controllers"> 
+                <div id="currentTime" class="current-Time">00:00</div>
+                <div id="duration" class="duration">00:00</div>               
+                <button id="anterior"><i class="fa fa-backward"></i> </button>
+                <button id="play"><i class="fa fa-play"></i></button>
+                <button id="pausar"><i class="fa fa-pause"></i></button>
+                <button id="siguiente"><i class="fa fa-forward"></i></button>
+        <!--<input id="volumen" type="range" min="0" max="1" step="0.01" onchange="adjustvolumen()"/>-->
+            </div>
+         
+        </div>
+        </div>
+
+
+        <script src="reproductor.js"></script>
+
+</body>
+
+</html>
